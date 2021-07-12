@@ -25,10 +25,10 @@ class Gando {
 }
 
 //play a random track
-window.addEventListener('load', function(){
-          let song_random = tracks[Math.floor(Math.random() * tracks.length)];
-          player.src = song_random;
-});
+let song_random = tracks[Math.floor(Math.random() * tracks.length)];
+player.setAttribute('src',song_random);
+
+
 //choose a random quote
          setInterval(function(){
           let random = quotes[Math.floor(Math.random() * quotes.length)];
