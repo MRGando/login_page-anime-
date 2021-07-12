@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/chat-bubble-talk-message-communication-comment-10-3297.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <meta name="Theme-color" content="#2d2b3899">
+    <title>Chaty | Private</title>
     <link rel="stylesheet" href="style.css">
-    <title>NewClass</title>
 </head>
 
 <body>
@@ -17,10 +19,11 @@
     <div class="main">
         <p class="display"></p>
         <div class="login">
-            <form action="" method="post">
+            <form class="form" action="" method="post">
                 <h1>Login</h1>
                 <input type="text" name="username" id="" placeholder="Username"><br>
-                <input type="password" name="password" id="" placeholder="password">
+                <i onclick="visToggle()" class="fas fa-eye eye"></i>
+                <input id="passinp" type="password" name="password" id="" placeholder="password">
                 <br>
                 <a rel="nofollow" href="http://">
                     <p class="forgotTXT">ForgotPass?</p>

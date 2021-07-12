@@ -1,6 +1,8 @@
 let quote = document.querySelector(".quotehere");
 let loading = document.querySelector(".loadingPage");
 let player = document.querySelector(".audioplayer");
+let viseye = document.querySelector(".eye");
+let visState = false;
 let quotes = [
     "“Love is like the wind, you can’t see it but you can feel it.”",
     "“You know you’re in love when you can’t fall asleep because reality is finally better than your dreams.”",
@@ -53,3 +55,15 @@ window.addEventListener("load", function() {
         loading.style.display = "none";
     }, 1000);
 });
+
+function visToggle() {
+    if (visState) {
+        document.getElementById('passinp').setAttribute('type', 'password');
+        viseye.style.color = "#2d2b3899";
+        visState = false;
+    } else {
+        document.getElementById('passinp').setAttribute('type', 'text');
+        viseye.style.color = "#000";
+        visState = true;
+    }
+}
