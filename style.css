@@ -115,6 +115,25 @@ a {
     text-decoration: none;
 }
 
+.volUp {
+    color: black;
+    font-size: 20px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.volUp:hover {
+    background-color: black;
+    color: whitesmoke;
+}
+
 @media (max-width: 430px) {
     .eye {
         right: 10px;
