@@ -119,8 +119,8 @@ a {
     color: black;
     font-size: 20px;
     position: fixed;
-    bottom: 40px;
-    right: 40px;
+    top: 20px;
+    right: 20px;
     padding: 10px;
     font-size: 30px;
     border-radius: 10px;
