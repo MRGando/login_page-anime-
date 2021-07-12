@@ -26,7 +26,9 @@ class Gando {
 
 //play a random track
 let song_random = tracks[Math.floor(Math.random() * tracks.length)];
-player.setAttribute('src',song_random);
+let audio = new Audio(song_random);
+audio.play();
+//player.setAttribute('src',song_random);
 
 
 //choose a random quote
