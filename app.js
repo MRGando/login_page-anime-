@@ -48,13 +48,11 @@ window.addEventListener("load", function() {
     setTimeout(() => {
         //play a random track
         let song_random = tracks[Math.floor(Math.random() * tracks.length)];
-        if (isPlaying) {
-            let audio = new Audio(song_random);
+        let audio = new Audio(song_random);
+        audio.play();
+        audio.addEventListener("ended", function() {
             audio.play();
-            audio.addEventListener("ended", function() {
-                audio.play();
-            });
-        }
+        });
     }, 2000);
     loading.style.opacity = "0";
     setTimeout(function() {
@@ -76,8 +74,10 @@ function visToggle() {
 
 //sound stop/play toggle
 function soundController() {
-    if (!isPlaying) {
+    if (isPlaying) {
         audio.pause();
+        isPlaying = false;
+    } else {
+        isPlaying = true;
     }
-    isPlaying = false;
 }
