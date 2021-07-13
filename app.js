@@ -4,7 +4,7 @@ let player = document.querySelector(".audioplayer");
 let userName = document.querySelector(".username");
 let volUp = document.querySelector(".volUp");
 let viseye = document.querySelector(".eye");
-let isPlaying = true;
+//let isPlaying = true;
 let visState = false;
 let quotes = [
     "“Love is like the wind, you can’t see it but you can feel it.”",
@@ -45,20 +45,27 @@ setInterval(function() {
 }, 20000);
 window.addEventListener("load", function() {
     userName.value = "";
+    let song_random = tracks[Math.floor(Math.random() * tracks.length)];
+    var audio = new Audio(song_random);
     setTimeout(() => {
         //play a random track
-        let song_random = tracks[Math.floor(Math.random() * tracks.length)];
-        let audio = new Audio(song_random);
         audio.play();
         audio.addEventListener("ended", function() {
             audio.play();
         });
     }, 2000);
+    //sound stop/play toggle
+
     loading.style.opacity = "0";
     setTimeout(function() {
         loading.style.display = "none";
     }, 1000);
 });
+
+function pauseIt() {
+    audio.pause();
+}
+
 
 function visToggle() {
     if (visState) {
@@ -72,12 +79,10 @@ function visToggle() {
     }
 }
 
-//sound stop/play toggle
-function soundController() {
-    if (isPlaying) {
-        audio.pause();
-        isPlaying = false;
+function pauseIt() {
+    if (!audio.isPlaying()) {
+        audio.play();
     } else {
-        isPlaying = true;
+        audio.pause();
     }
 }

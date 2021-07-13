@@ -22,21 +22,22 @@
             <form class="form" action="" method="post">
                 <h1>Login</h1>
                 <input class="username" type="text" name="username" id="" placeholder="Username"><br>
-                <i onclick="visToggle()" class="fas fa-eye eye"></i>
-                <input id="passinp" type="password" name="password" id="" placeholder="password">
+                <div class="passbox">
+                    <i onclick="visToggle()" class="fas fa-eye eye"></i>
+                    <input id="passinp" type="password" name="password" id="" placeholder="password">
+                </div>
                 <br>
                 <a rel="nofollow" href="http://">
                     <p class="forgotTXT">ForgotPass?</p>
                 </a>
                 <button class="loginBTN" type="submit">Login</button>
-                <audio class="audioplayer" src="" autoplay></audio>
             </form>
             <div class="quotes">
                 <blockquote class="quotehere">“One word frees us of all the weight and pain of life: that word is love.”
                 </blockquote>
             </div>
         </div>
-        <i class="fas fa-volume-up volUp" onclick="soundController()"></i>
+        <i id="volUp" class="fas fa-volume-up volUp" onclick="pauseIt()"></i>
     </div>
 
 </body>
