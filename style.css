@@ -17,10 +17,6 @@
         color: whitesmoke;
     }
     
-    .thesvg {
-        width: 500px;
-    }
-    
     .main {
         width: 100vw;
         height: 100vh;
@@ -132,7 +128,7 @@
     }
     
     .volUp:hover {
-        background-color: black;
+        background-color: rgb(0, 0, 0, 0.50);
         color: whitesmoke;
     }
     
