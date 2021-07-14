@@ -80,6 +80,7 @@ setTimeout(() => {
     });
 }, 3000);
 var bleep = new Audio("src/click.wav");
+audio.volume = 0.5;
 
 function pauseIt() {
 
