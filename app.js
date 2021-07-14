@@ -45,16 +45,6 @@ setInterval(function() {
 }, 20000);
 window.addEventListener("load", function() {
     userName.value = "";
-    let song_random = tracks[Math.floor(Math.random() * tracks.length)];
-    var audio = new Audio(song_random);
-    setTimeout(() => {
-        //play a random track
-        audio.play();
-        audio.addEventListener("ended", function() {
-            audio.play();
-        });
-    }, 2000);
-    //sound stop/play toggle
 
     loading.style.opacity = "0";
     setTimeout(function() {
@@ -79,10 +69,27 @@ function visToggle() {
     }
 }
 
-function pauseIt() {
-    if (!audio.isPlaying()) {
+//choose a random track
+let song_random = tracks[Math.floor(Math.random() * tracks.length)];
+var audio = new Audio(song_random);
+setTimeout(() => {
+    //play the random track after 3min
+    audio.play();
+    audio.addEventListener("ended", function() {
         audio.play();
+    });
+}, 3000);
+var bleep = new Audio("src/click.wav");
+
+function pauseIt() {
+
+    if (audio.paused) {
+        bleep.play();
+        setTimeout(() => {
+            audio.play();
+        }, 500);
     } else {
+        bleep.play();
         audio.pause();
     }
 }
