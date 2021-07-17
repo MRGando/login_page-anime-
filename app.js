@@ -79,7 +79,7 @@ setTimeout(() => {
         audio.play();
     });
 }, 3000);
-var bleep = new Audio("src/click.wav");
+var bleep = new Audio("https://8pic.ir/do.php?downf=click.wav");
 audio.volume = 0.5;
 
 function pauseIt() {
